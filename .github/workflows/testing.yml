@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - src/boxmuller
+      - test/boxmuller
 
 permissions:
   contents: read
