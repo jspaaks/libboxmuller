@@ -2,6 +2,10 @@
 
 For instructions on building, formatting, testing, etc, see [`README.dev.md`](README.dev.md).
 
+## Executables
+
+- `example` Example program that draws 7 random numbers from a normal distribution with mean 100 and standard deviation 2.
+
 ## Libraries
 
 - `boxmuller`: Normally distributed random number generation.
