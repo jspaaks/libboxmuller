@@ -19,7 +19,7 @@ $ cmake --build .
 $ cmake --install .
 
 # library also installs documentation as man pages
-$ man -l ./dist/share/man/man3/boxmuller.3
+$ man -l ./dist/share/man/man3/boxmuller_randn.3
 ```
 
 
