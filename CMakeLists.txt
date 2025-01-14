@@ -14,4 +14,5 @@ endif()
 
 add_subdirectory(${PROJECT_ROOT}/man/boxmuller)
 add_subdirectory(${PROJECT_ROOT}/src/boxmuller)
+add_subdirectory(${PROJECT_ROOT}/src/example)
 add_subdirectory(${PROJECT_ROOT}/test/boxmuller)
