@@ -4,8 +4,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - src/boxmuller
-      - test/boxmuller
+      - src/boxmuller/*.c
+      - src/boxmuller/CMakeLists.txt
+      - test/boxmuller/*.c
+      - test/boxmuller/CMakeLists.txt
 
 permissions:
   contents: read
