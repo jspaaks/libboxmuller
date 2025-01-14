@@ -17,6 +17,9 @@ jobs:
       - name: Check out a copy of the repository
         uses: actions/checkout@v4
 
+      - name: Install test dependency criterion
+        run: sudo apt install libcriterion-dev
+
       - name: Build
         run: |
           mkdir build
