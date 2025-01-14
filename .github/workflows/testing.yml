@@ -22,8 +22,8 @@ jobs:
           mkdir build
           cd build
           cmake ..
-          cmake build .
-          cmake install .
+          cmake --build .
+          cmake --install .
 
       - name: Test
         run: |
