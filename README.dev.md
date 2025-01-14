@@ -6,8 +6,8 @@ The project has been initialized with a [CMakeLists.txt](CMakeLists.txt)-based
 configuration for building with CMake:
 
 ```console
-# change into the build directory
-$ cd build
+# create the build directory and change into it
+$ mkdir build && cd build
 
 # generate the build files
 $ cmake ..
