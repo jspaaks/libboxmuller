@@ -22,6 +22,15 @@ $ cmake --install .
 $ man -l ./dist/share/man/man3/boxmuller_randn.3
 ```
 
+The CMake variables `BOXMULLER_BUILD_TESTS` and `BOXMULLER_BUILD_EXAMPLES` can be used to build the
+tests and examples, respectively. By default they are built when this project is the top
+project; when boxmuller is used as a dependency of a different project, the default is to build
+neither the tests nor the examples, but each can be turned on by setting the beforementioned
+variables. e.g like so:
+
+```
+cmake -DBOXMULLER_BUILD_TESTING=ON -DBOXMULLER_BUILD_EXAMPLES=ON ..
+```
 
 ## Testing
 
@@ -35,6 +44,12 @@ Run the tests with
 
 ```console
 $ ./dist/bin/test_boxmuller -j1 --verbose
+```
+
+Or simply,
+
+```console
+$ ctest
 ```
 
 ## `clang-format`
