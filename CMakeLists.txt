@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23...3.28)
 
 project(project_boxmuller LANGUAGES C)
-include(CTest)
+include(CTest)  # defines BUILD_TESTING
 
 set(PROJECT_ROOT ${CMAKE_CURRENT_LIST_DIR})
 
