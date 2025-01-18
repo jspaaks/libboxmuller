@@ -6,7 +6,7 @@ include(CTest)  # defines BUILD_TESTING
 set(PROJECT_ROOT ${CMAKE_CURRENT_LIST_DIR})
 
 if (NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Debug)
+    set(CMAKE_BUILD_TYPE Debug)
 endif()
 
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
@@ -32,7 +32,7 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     endif()
     option(BOXMULLER_BUILD_EXAMPLES "Whether to build the libboxmuller examples" "ON")
 else()
-    # I'm not the top-most project, use BOXMULLER_BUILD_TESTING as-is
+    # I'm not the top-most project, use BOXMULLER_BUILD_TESTING and BOXMULLER_BUILD_EXAMPLES as-is
     option(BOXMULLER_BUILD_TESTING "Whether to build the libboxmuller tests" "OFF")
     option(BOXMULLER_BUILD_EXAMPLES "Whether to build the libboxmuller examples" "OFF")
 endif()
