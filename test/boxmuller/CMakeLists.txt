@@ -54,4 +54,11 @@ target_sources(
         ${PROJECT_ROOT}/test/boxmuller/test_boxmuller.c
 )
 
+add_test(
+    NAME
+        test_boxmuller
+    COMMAND
+        ${CMAKE_BINARY_DIR}/dist/bin/test_boxmuller
+)
+
 install(TARGETS tgt_exe_test_boxmuller)
