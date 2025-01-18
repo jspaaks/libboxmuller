@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.23...3.28)
 
-project(project_libboxmuller LANGUAGES C)
+project(project_boxmuller LANGUAGES C)
 include(CTest)
 
 set(PROJECT_ROOT ${CMAKE_CURRENT_LIST_DIR})
@@ -15,7 +15,6 @@ endif()
 
 add_subdirectory(${PROJECT_ROOT}/man/boxmuller)
 add_subdirectory(${PROJECT_ROOT}/src/boxmuller)
-add_subdirectory(${PROJECT_ROOT}/src/example)
 
 if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     # I'm the top-most project
@@ -31,10 +30,15 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     elseif (NOT BUILD_TESTING AND NOT BUILD_TESTING_BOXMULLER)
         set(BUILD_TESTING_BOXMULLER, "OFF")
     endif()
+    option(BUILD_EXAMPLES_BOXMULLER "Whether to build the libboxmuller examples" "ON")
 else()
     # I'm not the top-most project, use BUILD_TESTING_BOXMULLER as-is
     option(BUILD_TESTING_BOXMULLER "Whether to build the libboxmuller tests" "OFF")
+    option(BUILD_EXAMPLES_BOXMULLER "Whether to build the libboxmuller examples" "OFF")
 endif()
 if (BUILD_TESTING_BOXMULLER)
     add_subdirectory(${PROJECT_ROOT}/test/boxmuller)
+endif()
+if (BUILD_EXAMPLES_BOXMULLER)
+    add_subdirectory(${PROJECT_ROOT}/src/example)
 endif()
