@@ -38,6 +38,18 @@ int main (void) {
 }
 ```
 
+```console
+$ cmake -D BOXMULLER_BUILD_EXAMPLES=ON .. && cmake --build . && cmake --install . 
+$ ./dist/bin/example_boxmuller
+ 96.99
+102.61
+ 99.42
+ 97.60
+100.11
+101.01
+102.42
+```
+
 ## Acknowledgements
 
 _This project was initialized using [Copier](https://pypi.org/project/copier)
